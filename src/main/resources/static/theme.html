@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme Selector</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h2 id="main-heading">Choose a Theme</h2>
+
+  <button class="theme-btn" onclick="applyJarvis()">Jarvis</button>
+  <button class="theme-btn" onclick="applyLight()">Light</button>
+  <button class="theme-btn" onclick="applyDark()">Dark</button>
+
+  <h3>Custom Theme</h3>
+  <label>Background Color: <input type="color" id="bg" value="#0d0d0d"></label><br>
+  <label>Text Color: <input type="color" id="text" value="#00fff7"></label><br>
+  <label>Accent Color: <input type="color" id="accent" value="#00ffcc"></label><br>
+  <button class="theme-btn" onclick="applyCustom()">Apply Custom</button>
+
+  <script>
+    function applyJarvis() {
+      setThemeColors('#0d0d0d', '#00fff7', '#00ffcc');
+    }
+
+    function applyLight() {
+      setThemeColors('#ffffff', '#000000', '#007bff');
+    }
+
+    function applyDark() {
+      setThemeColors('#121212', '#ffffff', '#aaaaaa');
+    }
+
+    function applyCustom() {
+      const bg = document.getElementById('bg').value;
+      const text = document.getElementById('text').value;
+      const accent = document.getElementById('accent').value;
+      setThemeColors(bg, text, accent);
+    }
+  </script>
+
+</body>
+</html>

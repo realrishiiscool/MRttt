@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #00fff7;
+  --accent-color: #00ffcc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.theme-btn {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--text-color);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}

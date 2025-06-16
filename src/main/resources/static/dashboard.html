@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainer Dashboard</title>
+
+  <!-- Link to dynamic theme styles and script -->
+  <link rel="stylesheet" href="style.css" id="theme-style" />
+  <script src="script.js" defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 15px;
+      padding: 10px 20px;
+      background-color: var(--c2);
+      border-bottom: 2px solid var(--c3);
+    }
+
+    .navbar a {
+      color: var(--c3);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .navbar a:hover {
+      background-color: var(--c1);
+      color: var(--c2);
+    }
+
+    .dashboard {
+      padding: 20px;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: 150px repeat(7, 1fr);
+      border: 1px solid var(--c3);
+    }
+
+    .calendar .header, .calendar .cell {
+      border: 1px solid var(--c3);
+      padding: 10px;
+      min-height: 60px;
+    }
+
+    .header {
+      background-color: rgba(255, 255, 255, 0.05);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .room {
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .cell {
+      font-size: 0.9rem;
+    }
+
+    .title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Links -->
+  <div class="navbar">
+    <a href="theme.html">🌗 Theme</a>
+    <a href="trainer.html">👨‍🏫 Trainers</a>
+    <a href="course.html">📘 Courses</a>
+    <a href="batch.html">👥 Batches</a>
+  </div>
+
+  <div class="dashboard">
+    <div class="title">📅 Trainer Dashboard</div>
+
+    <div class="calendar">
+      <!-- Top Row: Days -->
+      <div class="header"></div>
+      <div class="header">Mon</div>
+      <div class="header">Tue</div>
+      <div class="header">Wed</div>
+      <div class="header">Thu</div>
+      <div class="header">Fri</div>
+      <div class="header">Sat</div>
+      <div class="header">Sun</div>
+
+      <!-- Smart Room -->
+      <div class="room">Smart Room</div>
+      <div class="cell">Trainer A<br>Course X<br>Batch 1</div>
+      <div class="cell"></div>
+      <div class="cell">Trainer B<br>Course Y<br>Batch 2</div>
+      <div class="cell"></div>
+      <div class="cell">Trainer A<br>Course X<br>Batch 1</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Normal Room -->
+      <div class="room">Normal Room</div>
+      <div class="cell"></div>
+      <div class="cell">Trainer C<br>Course Z<br>Batch 3</div>
+      <div class="cell"></div>
+      <div class="cell">Trainer D<br>Course Y<br>Batch 4</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell">Trainer C<br>Course Z<br>Batch 3</div>
+
+      <!-- Lab -->
+      <div class="room">Lab</div>
+      <div class="cell"></div>
+      <div class="cell">Trainer E<br>Course L<br>Batch 5</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell">Trainer E<br>Course L<br>Batch 5</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+
+</body>
+</html>

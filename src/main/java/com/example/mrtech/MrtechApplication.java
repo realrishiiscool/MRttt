@@ -9,6 +9,4 @@ public class MrtechApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MrtechApplication.class, args);
 	}
-
 }
-	
